@@ -3,7 +3,7 @@
   "name": "Crown Money Financial Toolkit",
   "version": "1.0.0",
   "description": "Australian financial calculators: home loans, stamp duty, tax, budgeting, investments & AI assistant.",
-  "permissions": ["storage"],
+  "permissions": [],
   "action": {
     "default_popup": "popup.html",
     "default_icon": {

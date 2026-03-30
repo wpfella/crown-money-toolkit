@@ -86,7 +86,7 @@
     </ul>
 
     <h2>2. Data Storage</h2>
-    <p>All calculator data, preferences, and settings are stored locally on your device using Chrome's built-in storage API (<code>chrome.storage.local</code>). This data:</p>
+    <p>All calculator data, preferences, and settings are stored locally on your device using your browser's local storage. This data:</p>
     <ul>
       <li>Never leaves your device unless you explicitly export it</li>
       <li>Is only accessible to this extension</li>
@@ -109,7 +109,6 @@
     <h2>4. Permissions</h2>
     <p>This extension requests the following Chrome permissions:</p>
     <ul>
-      <li><strong>storage</strong> &mdash; To save your calculator data and preferences locally on your device</li>
       <li><strong>Host permissions</strong> (api.openai.com, api.anthropic.com, generativelanguage.googleapis.com) &mdash; Only used when you explicitly connect an AI provider with your own API key. No requests are made to these services unless you configure and use the AI assistant feature.</li>
     </ul>
 

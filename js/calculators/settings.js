@@ -76,7 +76,7 @@ function getSettingsHTML() {
     <div class="calc-form">
       <h3>&#x1F512; Privacy & Security</h3>
       <p style="font-size:14px;color:#666;line-height:1.6;">
-        <strong>Your data stays on your device.</strong> Crown Money Financial Toolkit stores all calculator data and preferences locally using Chrome's secure storage API. No data is sent to CrownMoney.com.au or any third party.<br><br>
+        <strong>Your data stays on your device.</strong> Crown Money Financial Toolkit stores all calculator data and preferences locally in your browser. No data is sent to CrownMoney.com.au or any third party.<br><br>
         <strong>AI API keys:</strong> If you connect an AI provider, your API key is stored locally and only used to communicate directly with your chosen provider (OpenAI, Anthropic, or Google). We never see, store, or have access to your API keys.<br><br>
         <strong>No tracking.</strong> This extension does not collect analytics, usage data, or personal information of any kind.
       </p>
