@@ -1,0 +1,178 @@
+/* Calculator Shared Styles */
+.calc-form {
+  background: #fff;
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  border: 1px solid var(--gray-100);
+  margin-bottom: var(--space-lg);
+}
+
+.calc-form h3 {
+  font-size: var(--text-lg);
+  color: var(--crown-navy);
+  margin-bottom: var(--space-lg);
+  padding-bottom: var(--space-sm);
+  border-bottom: 2px solid var(--crown-gold-light);
+}
+
+.calc-actions {
+  display: flex;
+  gap: var(--space-sm);
+  margin-top: var(--space-lg);
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--gray-100);
+}
+
+/* Amortization Table */
+.amort-table {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.amort-table table {
+  font-size: var(--text-xs);
+}
+
+.amort-table th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: var(--gray-100);
+}
+
+.amort-table td.currency {
+  font-family: var(--font-mono);
+  text-align: right;
+}
+
+/* Debt List */
+.debt-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.debt-item {
+  display: grid;
+  grid-template-columns: 1fr 120px 100px 100px 40px;
+  gap: var(--space-sm);
+  align-items: center;
+  padding: var(--space-sm);
+  background: var(--gray-50);
+  border-radius: var(--radius-md);
+}
+
+.debt-item input {
+  font-size: var(--text-sm);
+  padding: 6px 10px;
+}
+
+.remove-debt {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  background: var(--color-danger-light);
+  color: var(--color-danger);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  transition: all var(--transition-fast);
+}
+
+.remove-debt:hover {
+  background: var(--color-danger);
+  color: #fff;
+}
+
+/* Budget Categories */
+.budget-category {
+  margin-bottom: var(--space-md);
+}
+
+.budget-category-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-sm) var(--space-md);
+  background: var(--gray-50);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-weight: 600;
+  font-size: var(--text-sm);
+}
+
+.budget-category-header .cat-total {
+  font-family: var(--font-mono);
+  color: var(--crown-gold-dark);
+}
+
+.budget-items {
+  padding: var(--space-sm) 0 0 var(--space-lg);
+}
+
+.budget-row {
+  display: grid;
+  grid-template-columns: 1fr 140px 40px;
+  gap: var(--space-sm);
+  align-items: center;
+  margin-bottom: var(--space-xs);
+}
+
+.budget-row input {
+  font-size: var(--text-sm);
+  padding: 6px 10px;
+}
+
+/* Recommendation Panel */
+.recommendations {
+  background: linear-gradient(135deg, rgba(212,168,67,0.06) 0%, rgba(39,174,96,0.06) 100%);
+  border: 1px solid var(--crown-gold-light);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  margin-top: var(--space-lg);
+}
+
+.recommendations h4 {
+  color: var(--crown-gold-dark);
+  margin-bottom: var(--space-md);
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.recommendation-item {
+  display: flex;
+  gap: var(--space-sm);
+  padding: var(--space-sm) 0;
+  font-size: var(--text-sm);
+  line-height: 1.5;
+}
+
+.recommendation-item:not(:last-child) {
+  border-bottom: 1px solid rgba(212,168,67,0.15);
+}
+
+.recommendation-item .rec-icon {
+  flex-shrink: 0;
+  font-size: 18px;
+}
+
+/* Export Bar */
+.export-bar {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-md);
+  background: var(--gray-50);
+  border-radius: var(--radius-md);
+  margin-top: var(--space-md);
+}
+
+.export-bar span {
+  font-size: var(--text-sm);
+  color: var(--gray-600);
+  margin-right: auto;
+}

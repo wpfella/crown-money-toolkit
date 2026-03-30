@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crown Money Financial Toolkit</title>
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/calculators.css">
+  <link rel="stylesheet" href="css/chatbot.css">
+</head>
+<body>
+  <div class="app">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <span class="crown-icon">&#x1F451;</span>
+        <h1>Crown Money</h1>
+        <div class="tagline">Financial Toolkit</div>
+      </div>
+
+      <nav>
+        <div class="nav-group">
+          <div class="nav-group-title">Home</div>
+          <a class="nav-item active" data-page="" href="#">
+            <span class="nav-icon">&#x1F3E0;</span> Dashboard
+          </a>
+        </div>
+
+        <div class="nav-group">
+          <div class="nav-group-title">Property</div>
+          <a class="nav-item" data-page="home-loan" href="#">
+            <span class="nav-icon">&#x1F3E1;</span> Home Loan
+          </a>
+          <a class="nav-item" data-page="mortgage-comparison" href="#">
+            <span class="nav-icon">&#x1F4CA;</span> Mortgage Comparison
+          </a>
+          <a class="nav-item" data-page="extra-repayment" href="#">
+            <span class="nav-icon">&#x1F4B8;</span> Extra Repayments
+          </a>
+          <a class="nav-item" data-page="offset-account" href="#">
+            <span class="nav-icon">&#x1F3E6;</span> Offset Account
+          </a>
+          <a class="nav-item" data-page="stamp-duty" href="#">
+            <span class="nav-icon">&#x1F4CB;</span> Stamp Duty
+          </a>
+          <a class="nav-item" data-page="rent-vs-buy" href="#">
+            <span class="nav-icon">&#x1F3D8;</span> Rent vs Buy
+          </a>
+          <a class="nav-item" data-page="refinance" href="#">
+            <span class="nav-icon">&#x1F504;</span> Refinance
+          </a>
+        </div>
+
+        <div class="nav-group">
+          <div class="nav-group-title">Money</div>
+          <a class="nav-item" data-page="budget-planner" href="#">
+            <span class="nav-icon">&#x1F4B0;</span> Budget Planner
+          </a>
+          <a class="nav-item" data-page="tax-estimator" href="#">
+            <span class="nav-icon">&#x1F9FE;</span> Tax Estimator
+          </a>
+          <a class="nav-item" data-page="savings-goal" href="#">
+            <span class="nav-icon">&#x1F3AF;</span> Savings Goal
+          </a>
+          <a class="nav-item" data-page="fhog" href="#">
+            <span class="nav-icon">&#x1F3C6;</span> First Home Grant
+          </a>
+        </div>
+
+        <div class="nav-group">
+          <div class="nav-group-title">Invest & Debt</div>
+          <a class="nav-item" data-page="investment-growth" href="#">
+            <span class="nav-icon">&#x1F4C8;</span> Investment Growth
+          </a>
+          <a class="nav-item" data-page="compound-interest" href="#">
+            <span class="nav-icon">&#x1F4B9;</span> Compound Interest
+          </a>
+          <a class="nav-item" data-page="debt-snowball" href="#">
+            <span class="nav-icon">&#x2744;</span> Debt Payoff
+          </a>
+        </div>
+
+        <div class="nav-group">
+          <div class="nav-group-title">Tools</div>
+          <a class="nav-item" data-page="settings" href="#">
+            <span class="nav-icon">&#x2699;</span> Settings
+          </a>
+        </div>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="main">
+      <!-- Header -->
+      <header class="header">
+        <div class="header-search">
+          <span class="search-icon">&#x1F50D;</span>
+          <input type="text" id="searchInput" placeholder="Search calculators...">
+        </div>
+        <div class="header-actions">
+          <button class="header-btn" id="btnChat" title="AI Assistant">&#x1F916;</button>
+          <button class="header-btn" id="btnSettings" title="Settings">&#x2699;</button>
+        </div>
+      </header>
+
+      <!-- Page Content -->
+      <div class="content">
+        <div class="content-inner" id="content">
+          <!-- Pages load here via router -->
+        </div>
+      </div>
+    </div>
+
+    <!-- AI Chat Panel -->
+    <div class="chat-overlay" id="chatPanel">
+      <div class="chat-header">
+        <div class="chat-avatar">&#x1F451;</div>
+        <div class="chat-title">
+          <h4>Crown Money AI</h4>
+          <p>Your financial assistant</p>
+        </div>
+        <button class="chat-close" id="chatClose">&#x2715;</button>
+      </div>
+      <div id="chatBody">
+        <!-- chat-setup or chat-messages injected by chatbot.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Third-party libs -->
+  <script src="lib/chart.min.js"></script>
+  <script src="lib/jspdf.umd.min.js"></script>
+  <script src="lib/jspdf-autotable.min.js"></script>
+
+  <!-- Core -->
+  <script src="js/storage.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/charts.js"></script>
+  <script src="js/export.js"></script>
+  <script src="js/chatbot.js"></script>
+
+  <!-- Australian Data -->
+  <script src="js/data/constants.js"></script>
+  <script src="js/data/stamp-duty-rates.js"></script>
+  <script src="js/data/tax-brackets.js"></script>
+  <script src="js/data/fhog-rules.js"></script>
+
+  <!-- Namespace init (must load before calculators) -->
+  <script src="js/init.js"></script>
+
+  <!-- Calculators -->
+  <script src="js/calculators/home-loan.js"></script>
+  <script src="js/calculators/mortgage-comparison.js"></script>
+  <script src="js/calculators/extra-repayment.js"></script>
+  <script src="js/calculators/offset-account.js"></script>
+  <script src="js/calculators/stamp-duty.js"></script>
+  <script src="js/calculators/budget-planner.js"></script>
+  <script src="js/calculators/investment-growth.js"></script>
+  <script src="js/calculators/compound-interest.js"></script>
+  <script src="js/calculators/debt-snowball.js"></script>
+  <script src="js/calculators/tax-estimator.js"></script>
+  <script src="js/calculators/fhog.js"></script>
+  <script src="js/calculators/savings-goal.js"></script>
+  <script src="js/calculators/rent-vs-buy.js"></script>
+  <script src="js/calculators/refinance.js"></script>
+  <script src="js/calculators/settings.js"></script>
+
+  <!-- Router & App (must be last) -->
+  <script src="js/router.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

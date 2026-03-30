@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 320px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: linear-gradient(135deg, #1A1A2E 0%, #16213E 100%);
+      color: #fff;
+      padding: 24px;
+    }
+    .logo { text-align: center; margin-bottom: 16px; }
+    .logo .crown { font-size: 48px; }
+    .logo h1 { font-size: 18px; color: #E2B03A; margin-top: 8px; font-weight: 700; }
+    .logo p { font-size: 12px; color: #a0a0c0; margin-top: 4px; }
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      background: linear-gradient(135deg, #D4A843 0%, #E2B03A 100%);
+      color: #1A1A2E;
+      border: none;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      margin-bottom: 8px;
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+    .btn:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(226,176,58,0.3); }
+    .quick-links { margin-top: 16px; }
+    .quick-links a {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      color: #d0d0e0;
+      text-decoration: none;
+      font-size: 13px;
+      border-radius: 6px;
+      transition: background 0.15s;
+    }
+    .quick-links a:hover { background: rgba(255,255,255,0.08); color: #E2B03A; }
+    .footer {
+      margin-top: 16px;
+      padding-top: 12px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      font-size: 10px;
+      color: #707090;
+      text-align: center;
+      line-height: 1.4;
+    }
+  </style>
+</head>
+<body>
+  <div class="logo">
+    <div class="crown">👑</div>
+    <h1>Crown Money</h1>
+    <p>Financial Toolkit</p>
+  </div>
+
+  <button class="btn" id="openDashboard">Open Full Dashboard</button>
+
+  <div class="quick-links">
+    <a href="#" data-page="home-loan">🏠 Home Loan Calculator</a>
+    <a href="#" data-page="stamp-duty">📋 Stamp Duty Calculator</a>
+    <a href="#" data-page="budget-planner">💰 Budget Planner</a>
+    <a href="#" data-page="tax-estimator">🧾 Tax Estimator</a>
+  </div>
+
+  <div class="footer">
+    Brought to you by CrownMoney.com.au<br>
+    Helping Australians build wealth sooner.
+  </div>
+
+  <script src="js/popup.js"></script>
+</body>
+</html>
