@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Crown Money Financial Toolkit",
   "version": "1.0.0",
-  "description": "Complete Australian financial calculator suite by CrownMoney.com.au — helping hardworking Australians pay off their home loan sooner and save thousands in interest.",
+  "description": "Australian financial calculators: home loans, stamp duty, tax, budgeting, investments & AI assistant.",
   "permissions": ["storage"],
   "action": {
     "default_popup": "popup.html",
